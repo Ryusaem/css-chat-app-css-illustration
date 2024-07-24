@@ -11,7 +11,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
 
 
@@ -30,42 +30,103 @@
 
 <body>
 
-    <div class="container">
-        <header>
+    <div class="background">
+        <div class="content">
+            <div class="chat-header">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>chevron-left</title>
+                    <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+                </svg>
+                <img src="./images/avatar.jpg" alt="Profile Picture" width="50" height="50">
+                <div>
+                    <h2>Samuel Green</h2>
+                    <p>Available to Walk</p>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>dots-vertical</title>
+                    <path
+                        d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" />
+                </svg>
+            </div>
 
-        </header>
+            <div class="chat-body">
+                <div class="chat-body__message">That sounds great. I'd be happy to discuss more.</div>
 
-        <main>
-            Samuel Green
-            Available to Walk
+                <div class="chat-body__message">Could you send over some pictures of your dog, please?</div>
 
-            That sounds great. I’d be happy with that.
 
-            Could you send over some pictures of your dog, please?
 
-            Here are a few pictures. She’s a happy girl!
+                <div class="chat-body__message-right dog-pictures">
+                    <img src="./images/dog-image-1.jpg" alt="Dog Picture 1">
+                    <img src="./images/dog-image-2.jpg" alt="Dog Picture 2">
+                    <img src="./images/dog-image-3.jpg" alt="Dog Picture 3">
+                </div>
 
-            Can you make it?
+                <div class="chat-body__message-right">Here are a few pictures. She's a happy girl!</div>
 
-            She looks so happy! The time we discussed works. How long shall I take her out for?
+                <div class="chat-body__message-right">Can you make it?</div>
 
-            30 minute walk
-            $29
 
-            1 hour walk
-            $49
+                <div class="chat-body__message">She looks so happy! The time we discussed works. How long shall I take
+                    her out
+                    for?
+                </div>
 
-            Type a message…
 
-            Simple booking
+                <div class="chat-body__input">
 
-            Stay in touch with our dog walkers through the chat interface. This makes it easy to
-            discuss arrangements and make bookings. Once the walk has been completed you can rate
-            your walker and book again all through the chat.
-        </main>
+                    <input type="radio" name="price"></input>
+                    <label for="price">30 minute walk - $29</label>
+                </div>
+
+                <div class="chat-body__input">
+                    <input type="radio" name="price"></input>
+                    <label for="price">1 hour walk - $49</label>
+                </div>
+
+
+                <div class="chat-body__input button">
+                    <input type="text" placeholder="Type a message...">
+                    <button>></button>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <footer class="footer">
+
+
+
+    <div class="content" style="display: none;">
+        Samuel Green
+        Available to Walk
+
+        That sounds great. I’d be happy with that.
+
+        Could you send over some pictures of your dog, please?
+
+        Here are a few pictures. She’s a happy girl!
+
+        Can you make it?
+
+        She looks so happy! The time we discussed works. How long shall I take her out for?
+
+        30 minute walk
+        $29
+
+        1 hour walk
+        $49
+
+        Type a message…
+
+        Simple booking
+
+        Stay in touch with our dog walkers through the chat interface. This makes it easy to
+        discuss arrangements and make bookings. Once the walk has been completed you can rate
+        your walker and book again all through the chat.
+    </div>
+
+    <footer class="footer" style="display: none;">
         <div class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
             Coded by <a href="https://github.com/Ryusaem">Ryusaem</a>.
