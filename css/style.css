@@ -32,9 +32,9 @@ body {
   height: 100vh;
 }
 
-div {
+/* div {
   border: 1px solid red;
-}
+} */
 
 .background {
   height: 75vh;
@@ -261,7 +261,8 @@ div {
   height: 30px;
   width: 100%;
   max-width: 100%;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+  border: none;
   outline: none;
   font-size: 0.55rem;
   border-radius: 15px;
