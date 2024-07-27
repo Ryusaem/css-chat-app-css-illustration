@@ -70,7 +70,7 @@ div {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 13px;
   max-width: 250px;
-  /* height: auto; */
+  height: auto;
   width: 65%;
   z-index: 1;
 }
@@ -106,6 +106,8 @@ div {
   margin-right: 10px;
   height: 30px;
   width: 30px;
+  /* height: 5vw;
+  width: 5vw; */
   border: 1px solid yellow;
 }
 
@@ -143,6 +145,7 @@ div {
   background: var(--color-base-app-bg);
   display: grid;
   gap: 7px;
+  overflow: hidden;
 }
 
 .chat-body__message,
@@ -249,6 +252,7 @@ div {
 
 .chat-body__input .tag-price {
   /* color: blue; */
+  font-weight: 700;
   padding: 2px 5px;
   font-size: 0.8rem;
 }
@@ -340,4 +344,111 @@ div {
 .fa-github {
   /* color: var(--color-base-primary-green); */
   margin-left: 0.5rem;
+}
+
+/* media queri (desktop) */
+
+@media screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .background {
+    height: 100vh;
+  }
+
+  .background::before {
+    width: 60%;
+    height: 90%;
+
+    border-bottom-right-radius: 1000px;
+    border-radius: 0 0 500px 500px;
+    /* z-index: -1; */
+  }
+
+  .content {
+    margin-left: 225px;
+    height: 70%;
+    width: 40%;
+  }
+
+  .chat-header h2 {
+    font-size: 0.5rem;
+  }
+
+  .chat-header p {
+    font-size: 0.4rem;
+  }
+
+  .chat-header img {
+    height: 2vw; /* Adjusted for larger screens */
+    width: 2vw; /* Adjusted for larger screens */
+  }
+
+  .chat-header svg {
+    height: 1vw; /* Adjusted for larger screens */
+    width: 1vw; /* Adjusted for larger screens */
+  }
+
+  .chat-body__message,
+  .chat-body__message-right {
+    max-width: 55%;
+    font-size: 0.3rem;
+  }
+
+  .chat-body img {
+    height: 5vh;
+    width: 5vw;
+  }
+
+  .chat-body__input input[type="radio"] {
+    height: 8px;
+    width: 8px;
+  }
+
+  .chat-body__input label {
+    font-size: 0.4rem;
+  }
+
+  .chat-body__input .tag-price {
+    font-size: 0.5rem;
+  }
+
+  .chat-body__input svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .chat-body__input button {
+    height: 20px;
+    width: 20px;
+  }
+
+  .chat-body__input input::placeholder {
+    font-size: 0.5rem;
+  }
+
+  .booking-info {
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 30px;
+    background: var(--color-base-app-bg);
+  }
+
+  .booking-info__title {
+    font-size: 2.3rem;
+    color: var(--color-pale-violet);
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+
+  .booking-info__description {
+    text-align: start;
+    line-height: 1.7;
+    color: var(--color-p);
+  }
 }
