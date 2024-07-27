@@ -75,19 +75,33 @@
 
                 <div class="chat-body__input">
 
-                    <input type="radio" name="price"></input>
-                    <label for="price">30 minute walk - $29</label>
+                    <input type="radio" name="price" id="price1"></input>
+                    <label for="price">30 minute walk
+                        <span class="tag-price">
+                            $29
+                        </span>
+                    </label>
                 </div>
 
                 <div class="chat-body__input">
-                    <input type="radio" name="price"></input>
-                    <label for="price">1 hour walk - $49</label>
+                    <input type="radio" name="price" id="price2"></input>
+                    <label for="price">1 hour walk
+                        <span class="tag-price">
+                            $49
+                        </span>
+                    </label>
                 </div>
 
 
                 <div class="chat-body__input button">
                     <input type="text" placeholder="Type a message...">
-                    <button>></button>
+                    <button class="send-message-button">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>chevron-right</title>
+                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
 
@@ -97,33 +111,16 @@
 
 
 
-    <div class="content" style="display: none;">
-        Samuel Green
-        Available to Walk
+    <div class="booking-info">
 
-        That sounds great. I’d be happy with that.
+        <h1 class="booking-info__title">Simple booking</h1>
 
-        Could you send over some pictures of your dog, please?
+        <p class="booking-info__description">
+            Stay in touch with our dog walkers through the chat interface. This makes it easy to
+            discuss arrangements and make bookings. Once the walk has been completed you can rate
+            your walker and book again all through the chat.
+        </p>
 
-        Here are a few pictures. She’s a happy girl!
-
-        Can you make it?
-
-        She looks so happy! The time we discussed works. How long shall I take her out for?
-
-        30 minute walk
-        $29
-
-        1 hour walk
-        $49
-
-        Type a message…
-
-        Simple booking
-
-        Stay in touch with our dog walkers through the chat interface. This makes it easy to
-        discuss arrangements and make bookings. Once the walk has been completed you can rate
-        your walker and book again all through the chat.
     </div>
 
     <footer class="footer" style="display: none;">

@@ -6,8 +6,8 @@
 
   --color-chat-body-bg: hsl(206, 6%, 79%);
   --test: hsl(276, 100%, 81%);
-  --color-chat-right-text: hsl(276, 55%, 52%);
-  --color-chat-left-text: hsl(271, 15%, 43%);
+  --color-chat-left-text: hsl(276, 55%, 52%);
+  --color-chat-right-text: hsl(271, 15%, 43%);
   --color-p: hsl(270, 7%, 64%);
   --color-sub-heading: hsl(276, 100%, 81%);
   --color-pale-violet: hsl(271, 36%, 24%);
@@ -37,7 +37,7 @@ div {
 }
 
 .background {
-  height: 70vh;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +51,7 @@ div {
   top: 0;
   left: 0;
   width: 50%;
-  height: 78%;
+  height: 70%;
   background: linear-gradient(
     0deg,
     var(--color-gradient-secondary) 50%,
@@ -63,7 +63,7 @@ div {
 
 .content {
   display: grid;
-  grid-template-rows: 0.2fr auto;
+  grid-template-rows: 0.2fr 1fr;
 
   background: var(--color-base-bg);
   border-radius: 20px;
@@ -155,12 +155,13 @@ div {
 }
 
 .chat-body__message {
-  color: var(--color-chat-right-text);
+  color: var(--color-chat-left-text);
   background: #ece5f3;
 }
 
 .chat-body__message-right {
   background: var(--color-base-bg);
+  color: var(--color-chat-right-text);
   justify-self: end;
 }
 
@@ -193,45 +194,124 @@ div {
   max-width: 100%;
 }
 
+.chat-body__input {
+  display: flex;
+  align-items: center;
+}
+
+.chat-body__input:not(:last-of-type) {
+  background: linear-gradient(
+    45deg,
+    var(--color-gradient-secondary) 50%,
+    var(--color-gradient-primary) 90%
+  );
+}
+
 .chat-body__input input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border: 1px solid var(--color-radio-button-outline);
-  /* border: none; */
-  border-radius: 7px;
-  padding: 5px;
+  border-radius: 50%;
+  margin-right: 10px;
   position: relative;
   cursor: pointer;
   outline: none;
-  transition: background-color 0.3s, border-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-body__input input[type="radio"]::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-radio-button-inner);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.chat-body__input input[type="radio"]:checked::before {
+  opacity: 1;
+}
+
+.chat-body__input label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+}
+
+.chat-body__input .tag-price {
+  /* color: blue; */
+  padding: 2px 5px;
+  font-size: 0.8rem;
 }
 
 .chat-body__input input[type="text"] {
   height: 30px;
   width: 100%;
   max-width: 100%;
-  border: none;
+  border: 1px solid blue;
   outline: none;
   font-size: 0.55rem;
-  border-radius: 10px;
+  border-radius: 15px;
   padding-left: 20px;
 }
 
 .chat-body__input button {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translate(-40%, -50%);
-  background-color: #007bff;
+  transform: translate(-20%, -50%);
+  background-color: var(--color-btn-submit);
   color: white;
   border: none;
   border-radius: 50%;
   /* padding: 5px 15px; */
   cursor: pointer;
+}
+
+.chat-body__input .send-message-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-body__input svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.booking-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 30px;
+  background: var(--color-base-app-bg);
+}
+
+.booking-info__title {
+  font-size: 2.3rem;
+  color: var(--color-pale-violet);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.booking-info__description {
+  text-align: center;
+  line-height: 1.7;
+  color: var(--color-p);
 }
 /* --- FOOTER --- */
 
