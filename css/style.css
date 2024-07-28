@@ -318,6 +318,28 @@ body {
   line-height: 1.7;
   color: var(--color-p);
 }
+
+/* --- ANIMATION --- */
+
+.msg {
+  opacity: 0;
+  /* animation: slideIn 1s forwards; */
+}
+@keyframes slideIn {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateX(100%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* --- FOOTER --- */
 
 .footer {
